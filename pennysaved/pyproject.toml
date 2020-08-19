@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "A Penny Saved"
+bundle = "agwebberley.malware"
+version = "0.0.1"
+url = "https://malware.agwebberley/pennysaved"
+license = "BSD license"
+author = 'Agwebberley & MalwarePerseus'
+author_email = "agwebberley@gmail.com"
+
+[tool.briefcase.app.pennysaved]
+formal_name = "A Penny Saved"
+description = "A Savings Application"
+icon = "src/pennysaved/resources/pennysaved"
+sources = ['src/pennysaved']
+requires = []
+
+
+[tool.briefcase.app.pennysaved.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.pennysaved.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.pennysaved.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.pennysaved.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.pennysaved.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
